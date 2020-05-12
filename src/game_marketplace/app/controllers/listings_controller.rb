@@ -1,6 +1,5 @@
 class ListingsController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_listing, only: [:show]
     before_action :set_user_listing, only: [:edit, :update, :destroy]
 
     def index
@@ -8,7 +7,7 @@ class ListingsController < ApplicationController
     end
 
     def show
-        #stripe
+        set_listing
     end
 
     def new 

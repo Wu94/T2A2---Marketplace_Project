@@ -1,0 +1,18 @@
+<h1>GAME AU</h1>
+
+# search bar
+# desive login/log out
+# checkout
+# watchlish 
+
+<% for listing in @listings %>
+<div>
+
+<%= link_to "edit", edit_listing_path(listing.id) if current_user.id == listing.id %>
+
+<% end %>
+
+<% if current_user.id == listing.id %> 
+
+<% end %>
+</div> 
