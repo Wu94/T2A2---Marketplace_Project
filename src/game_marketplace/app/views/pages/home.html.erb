@@ -1,2 +1,13 @@
 <h1>GAME AU</h1>
 <%= link_to "create listing", new_listing_path %>
+
+<div>
+<% for listing in @listings %>
+     <%= image_tag listing.picture if listing.picture.attached? %>
+     <div><%= link_to listing.title, listing_path(listing.id)%></div>
+        <div><%= listing.description %></div>
+        <div><%= listing.platform.name%></div>
+        <div><%= listing.genre.name %></div>
+        <div><%= listing.price%></div>
+</div>
+<% end %>
