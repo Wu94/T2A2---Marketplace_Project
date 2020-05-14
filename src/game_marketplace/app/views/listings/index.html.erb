@@ -1,18 +1,27 @@
 <h1>GAME AU</h1>
+<%= link_to "create listing", new_listing_path %>
 
-# search bar
-# desive login/log out
-# checkout
-# watchlish 
-
-<% for listing in @listings %>
+ 
 <div>
+<% for listing in @listings %>
+    <%= image_tag listing.picture if listing.picture.attached? %>
+                <div>$<%= listing.platform%></div>
+                <div><%= listing.genre%></div>
+                <div><%= listing.price%></div>
+             
+            <%= link_to listing.title, listing_path(listing.id)%>
+            <div><%= listing.description %></div>
+</div>
 
-<%= link_to "edit", edit_listing_path(listing.id) if current_user.id == listing.id %>
 
 <% end %>
 
-<% if current_user.id == listing.id %> 
+<% if current_user.id == listing.user_id %> 
 
+    <%= form_with model: listing, local: true, method: "delete" do |form| %>
+    <div>
+        <%= submit_tag "delete", class: "icon" %>
+        <%= link_to "edit", edit_listing_path(listing.id) %>
+<% end %>
 <% end %>
 </div> 

@@ -1,5 +1,6 @@
 class ListingsController < ApplicationController
     before_action :authenticate_user!
+    before_action :set_listing, only: [:show]
     before_action :set_user_listing, only: [:edit, :update, :destroy]
 
     def index
@@ -11,6 +12,7 @@ class ListingsController < ApplicationController
     end
 
     def new 
+        set_platforms_genres
         @listings = Listing.new
     end
 
@@ -51,17 +53,18 @@ class ListingsController < ApplicationController
 
     def set_user_listing
         @listing = current_user.listings.find_by_id(params[:id])
+
         if @listing == nil
             redirect_to listings_path
         end
     end
 
     def set_platforms_genres
-        @platform = Platform.all
+        @platforms = Platform.all
         @genres = Genre.all
     end
 
     def listing_params
-        params.require(:listing).permit(:title, :description, :platform_id, :genre_id, :price, :city, :state, :date_of_listing, :picture)
+        params.require(:listing).permit(:title, :description, :platform_id, :genre_id, :price, :city, :state, :date_of_listing)
     end
 end

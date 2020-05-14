@@ -1,6 +1,6 @@
-<% if @listing.errors.any? %>
+<% if @listings.errors.any? %>
     <ul>
-        <% @listing.errors.full_messages.each do |message| %>
+        <% @listing.errors.full_messages.each do |error| %>
             <li> <%= error %> </li>
         <% end %>
     </ul>
@@ -46,11 +46,6 @@
         <%= form.label :date_of_listing %>
         <%= form.date_field :date_of_birth %>
     </div>
-
-    # <div>
-    #     <%= form.label :picture %>
-    #     <%= form.file_field :picture, accept: "image/png, image/gif, image/jpeg, image/jpg" %>
-    # </div>
 
     <div>
         <%= form.submit %>
