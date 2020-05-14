@@ -13,11 +13,11 @@ class ListingsController < ApplicationController
 
     def new 
         set_platforms_genres
-        @listings = Listing.new
+        @listing = Listing.new
     end
 
     def create
-        @listings = current_user.listings.create(listing_params)
+        @listing = current_user.listings.create(listing_params)
         if @listing.errors.any?
             set_platforms_genres
             render "new"

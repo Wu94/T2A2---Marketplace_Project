@@ -1,4 +1,4 @@
-<% if @listings.errors.any? %>
+<% if @listing.errors.any? %>
     <ul>
         <% @listing.errors.full_messages.each do |error| %>
             <li> <%= error %> </li>
@@ -6,7 +6,7 @@
     </ul>
 <% end %>
 
-<%= form_with(model: listing, local: true) do |form| %>
+<%= form_with(model: @listing, local: true) do |form| %>
     <div>
         <%= form.label :title %>
         <%= form.text_field :title %>
@@ -44,7 +44,7 @@
     
     <div>
         <%= form.label :date_of_listing %>
-        <%= form.date_field :date_of_birth %>
+        <%= form.date_field :date_of_listing %>
     </div>
 
     <div>
