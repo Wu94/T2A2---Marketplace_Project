@@ -9,6 +9,7 @@
         <div><%= listing.platform.name%></div>
         <div><%= listing.genre.name %></div>
         <div><%= listing.price%></div>
+    <%= link_to "view", listing_path(listing) %>
 </div>
 <% end %>
 
