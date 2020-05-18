@@ -1,20 +1,25 @@
-<div>
+<div class="row">
 <% for listing in @listings %>
-     <%= image_tag listing.picture if listing.picture.attached? %>
-     <div><%= link_to listing.title, listing_path(listing.id)%></div>
-        <div><%= listing.description %></div>
-        <div><%= listing.platform.name%></div>
-        <div><%= listing.genre.name %></div>
-        <div><%= listing.price%></div>
-    <%= link_to "view", listing_path(listing) %>
-</div>
-<% end %>
-
-<% if current_user.id == listing.user_id %> 
-    <%= form_with model: listing, local: true, method: "delete" do |form| %>
-    <div>
-        <%= submit_tag "delete", class: "icon" %>
-        <%= link_to "edit", edit_listing_path(listing.id) %>
-<% end %>
-<% end %>
+  <div class="col-md-4">
+        <div ="card border-light">
+                        <img class="img-thumbnail" <%= image_tag listing.picture if listing.picture.attached? %> 
+                <div class="card-body">
+                        <h5 class="card-title"> <%= listing.title%> </h5>
+                                <p> Platform: <%= listing.platform.name%></p>
+                                <p> Genre: <%= listing.genre.name %></p>
+                                <p> Price: <%= listing.price%></p> 
+                                <p><%= listing.description %></p>
+                        <a><%= link_to "View listing", listing_path(listing.id)%></a>
+                        <% if current_user.id == listing.user_id %> 
+                        <%= form_with model: listing, local: true, method: "delete" do |form| %>
+                            <%= submit_tag "delete", class: "icon" %>
+                            <a><%= link_to "edit", edit_listing_path(listing.id) %></a>
+                        <% end %>
+    
+                </div>  
+        </div> 
+    <% end %>
 </div> 
+<% end %>   
+
+
