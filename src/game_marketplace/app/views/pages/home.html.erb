@@ -1,13 +1,19 @@
-<h1>GAME AU</h1>
-<%= link_to "create listing", new_listing_path %>
-
-<div>
+<div class="row">
 <% for listing in @listings %>
-     <%= image_tag listing.picture if listing.picture.attached? %>
-     <div><%= link_to listing.title, listing_path(listing.id)%></div>
-        <div><%= listing.description %></div>
-        <div><%= listing.platform.name%></div>
-        <div><%= listing.genre.name %></div>
-        <div><%= listing.price%></div>
-</div>
-<% end %>
+  <div class="col-md-4">
+        <div ="card border-light">
+                        <img class="img-thumbnail" <%= image_tag listing.picture if listing.picture.attached? %> 
+                <div class="card-body">
+                        <h5 class="card-title"> <%= listing.title%> </h5>
+                                <p> Platform: <%= listing.platform.name%></p>
+                                <p> Genre: <%= listing.genre.name %></p>
+                                <p> Price: <%= listing.price%></p> 
+                                <p><%= listing.description %></p>
+                        <a><%= link_to "View listing", listing_path(listing.id)%></a>
+                </div>  
+        </div> 
+</div> 
+
+<% end %>   
+</div>  
+
