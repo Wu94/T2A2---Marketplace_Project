@@ -31,14 +31,14 @@ class ListingsController < ApplicationController
     end
 
     def new 
-        set_platforms_genres
+        set_products_platforms_genres
         @listing = Listing.new
     end
 
     def create
         @listing = current_user.listings.create(listing_params)
         if @listing.errors.any?
-            set_platforms_genres
+            set_products_platforms_genres
             render "new"
         else
             redirect_to listings_path
@@ -52,7 +52,7 @@ class ListingsController < ApplicationController
     def update
         @listing = Listing.update(params["id"], listing_params)
         if @listing.errors.any?
-            set_platforms_genres
+            set_products_platforms_genres
             render "edit"
         else
             redirect_to listings_path
@@ -78,12 +78,13 @@ class ListingsController < ApplicationController
         end
     end
 
-    def set_platforms_genres
+    def set_products_platforms_genres
+        @products = Listing.products.keys
         @platforms = Platform.all
         @genres = Genre.all
     end
 
     def listing_params
-        params.require(:listing).permit(:title, :description, :platform_id, :genre_id, :price, :city, :state, :date_of_listing, :picture)
+        params.require(:listing).permit(:title, :description, :product, :platform_id, :genre_id, :price, :city, :state, :date_of_listing, :picture)
     end
 end
