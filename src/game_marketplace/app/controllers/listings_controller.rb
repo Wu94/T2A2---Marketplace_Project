@@ -46,7 +46,7 @@ class ListingsController < ApplicationController
     end
 
     def edit
-        set_platforms_genres
+        set_products_platforms_genres
     end
 
     def update

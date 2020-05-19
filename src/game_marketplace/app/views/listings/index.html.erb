@@ -10,14 +10,13 @@
                                 <p> Genre: <%= listing.genre.name.titleize %></p>
                                 <p> Price: <%= listing.price%></p> 
                         <button class="btn btn-outline-secondary btn-sm" type="submit"><%= link_to "View Listing", listing_path(listing.id)%></button>
-                        <% if current_user.id == listing.user_id %> 
-                        <%= form_with model: listing, local: true, method: "delete" do |form| %>
-                        <button class="btn btn-outline-secondary btn-sm" type="submit"><%= link_to "Delete" %></button>
+                        <% if user_signed_in? && current_user.id == listing.user_id %>
+                                <%= form_with model: listing, local: true, method: "delete" do |form| %>
+                                <a><%= submit_tag "delete", class: "icon" %></a>
                             <button class="btn btn-outline-secondary btn-sm" type="submit"><%= link_to "Edit", edit_listing_path(listing.id) %></button>
-                        <% end %>
-    
+                                <% end %>
+                                <% end %>
                 </div>  
         </div> 
-    <% end %>
 </div> 
 <% end %>   
