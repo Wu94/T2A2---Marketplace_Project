@@ -34,7 +34,11 @@ Only users that are logged in can create listings to sell gaming new or old gami
 
 ## Sitemap
 
+![Sitemap](Docs/website.png)
+
 ## Screenshots
+
+![Website](Docs/website.png)
 
 ## Target audience
 
@@ -80,8 +84,12 @@ As a buyer or seller, I don't want other users to edit or delete my listings.
 
 ## Wireframes
 
+![Wireframes](Docs/website.png)
+
 
 ## An ERD for your app
+
+![ERD](Docs/website.png)
 
 
 ## Explain the different high-level components (abstractions) in your app
@@ -113,4 +121,19 @@ Amazon S3 is an active storage service that allows users to upload images to the
 
 Bootstrap is a CSS framework that has been used to style this application. This CSS framework allows for quicker styling as it gives set styling methods, which also can be edited in the SCSS stylesheet file. 
 
+## Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+![Models](Docs/website.png)
+
+## Discuss the database relations to be implemented in your application
+
+![Database](Docs/website.png)
+
+## Provide your database schema design
+
+![Schema](Docs/website.png)
+
+## Describe the way tasks are allocated and tracked in your project
+
+![project](Docs/website.png)
 
