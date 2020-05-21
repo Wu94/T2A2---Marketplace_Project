@@ -123,7 +123,23 @@ Bootstrap is a CSS framework that has been used to style this application. This 
 
 ## Describe your projects models in terms of the relationships (active record associations) they have with each other
 
-![Models](Docs/website.png)
+A user has_many listings, a listing belongs_to a user. 
+
+A platform has_many listings, a platform belongs_to a listing. 
+
+A genre has_many listings, a genre belongs_to a listing. 
+
+A listing has_one_attached picture, a picture belongs_to a listing.
+
+A listing belongs_to a user, a user has_many listings.
+
+![Models](docs/Users.png)
+
+![Models](docs/listing.png)
+
+![Models](docs/platforms.png)
+
+![Models](docs/genres.png)
 
 ## Discuss the database relations to be implemented in your application
 
