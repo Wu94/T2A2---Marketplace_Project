@@ -133,13 +133,13 @@ A listing has_one_attached picture, a picture belongs_to a listing.
 
 A listing belongs_to a user, a user has_many listings.
 
-![Models](docs/Users.png)
+![Models](docs/user_model.png)
 
-![Models](docs/listing.png)
+![Models](docs/listings_model.png)
 
-![Models](docs/platforms.png)
+![Models](docs/platform_model.png)
 
-![Models](docs/genres.png)
+![Models](docs/genre_model.png)
 
 ## Discuss the database relations to be implemented in your application
 
