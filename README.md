@@ -16,7 +16,7 @@ Taking a business that went into administration and revamping it may not be idea
 
 ### Website link: https://gamemarketplace123.herokuapp.com/ 
 
-### Github Repo: 
+### Github Repo: https://github.com/Wu94/T2A2---Marketplace_Project
 
 ## Purpose
 
