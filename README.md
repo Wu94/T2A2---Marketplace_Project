@@ -181,21 +181,20 @@ A listing belongs_to a user, a user has_many listings.
 
 The user table shows an email and a password, which is needed for users of the site to sign up and log in to the site which the user_id is used to track the users listing. 
 
-![Database](Docs/website.png)
+![Database](docs/userERD.png)
 
 The listing table shows the listing belongs to a user by user_id, which is a foreign key and the table allows shows data that is needed to create a successful listing, which needs a name, description, product type, platform, genre, price and date of listing. 
 
-![Database](Docs/website.png)
+![Database](docs/listingERD.png)
 
 The platform and genre table are both connected to the listings as a genre and platform belong to a listing. This is used by a forigen key which allows an array of different genres and platforms to be used for a listing.
 
-![Database](Docs/website.png)
-![Database](Docs/website.png)
+![Database](docs/genre_platformERD.png)
+
 
 The active storage blobs and active storage attachment tables are connected by a forigen key and are used for users to upload images to a listing, by calling has_one_attached in listing.rb file. The table also holds the data, such as the file name and content type of the image that has been uploaded.  
 
-![Database](Docs/website.png)
-![Database](Docs/website.png)
+![Database](docs/S3ERD.png)
 
 ## Provide your database schema design
 
@@ -203,27 +202,27 @@ The images below, show each schema design used in this application.
 
 ### Users
 
-![Schema](Docs/website.png)
+![Schema](docs/Users.png)
 
 ### Listings
 
-![Schema](Docs/website.png)
+![Schema](docs/listings.png)
 
 ### Platforms
 
-![Schema](Docs/website.png)
+![Schema](docs/platforms.png)
 
 ### Genres
 
-![Schema](Docs/website.png)
+![Schema](docs/genres.png)
 
 ### Active Storage Attachments
 
-![Schema](Docs/website.png)
+![Schema](docs/Active_Storage_Attachments.png)
 
 ### Active Storage Blobs
 
-![Schema](Docs/website.png)
+![Schema](docs/Active_Storage_Blobs.png)
 
 ## Describe the way tasks are allocated and tracked in your project
 
