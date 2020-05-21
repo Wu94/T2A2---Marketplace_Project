@@ -228,5 +228,18 @@ The images below, show each schema design used in this application.
 
 This project has been tracked and managed by using github project board. When creating the project board, the MVP were placed in the to do list then the progress list when a part of the project was being developed then moved to the done list as it was completed. The extra list was created to add optional features to the project if time management of the project would permit it after the MVP was completed. The images below show the progress of the project in different stages. 
 
-![Project](Docs/website.png)
+![Project](docs/Day1ToDoList.png)
 
+![Project](docs/Day2ToDoList.png)
+
+![Project](docs/day3.png)
+
+![Project](docs/day4.png)
+
+![Project](docs/day5.png)
+
+![Project](docs/day6.png)
+
+![Project](docs/day7.png)
+
+![Project](docs/finalday.png)
