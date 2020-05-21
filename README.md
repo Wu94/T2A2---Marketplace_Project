@@ -242,4 +242,4 @@ This project has been tracked and managed by using github project board. When cr
 
 ![Project](docs/day7.png)
 
-![Project](docs/finalday.png)
+![Project](docs/done.png)

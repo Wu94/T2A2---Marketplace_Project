@@ -11,7 +11,7 @@
     <p> Seller: <%= @listing.user.email %></p>
 
 
-
+# stripe payment code
     <button data-stripe="payment">
       Buy <%= number_to_currency(@listing.price) %>
     </button>

@@ -2,7 +2,7 @@ class ListingsController < ApplicationController
     before_action :authenticate_user!
     before_action :set_listing, only: [:show]
     before_action :set_user_listing, only: [:edit, :update, :destroy]
-
+# CRUD Operations
     def index
         @listings = Listing.all
     end
@@ -77,13 +77,13 @@ class ListingsController < ApplicationController
             redirect_to listings_path
         end
     end
-
+    # creating method for products, platform and genres
     def set_products_platforms_genres
         @products = Listing.products.keys
         @platforms = Platform.all
         @genres = Genre.all
     end
-
+    # Sanitise and validates input to maintain data integrity
     def listing_params
         params.require(:listing).permit(:title, :description, :product, :platform_id, :genre_id, :price, :city, :state, :date_of_listing, :picture)
     end
