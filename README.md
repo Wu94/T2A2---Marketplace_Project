@@ -89,7 +89,7 @@ As a buyer or seller, I don't want other users to edit or delete my listings.
 
 ## An ERD for your app
 
-![ERD](Docs/website.png)
+![ERD](docs/ERD.png)
 
 
 ## Explain the different high-level components (abstractions) in your app
