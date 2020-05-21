@@ -86,35 +86,42 @@ The user stories below will describe the users functionality of the features of 
 ### Users: 
 
 As a site viewer, I want to be able to view listings without needing to sign up.
+
 As a site viewer, I want to be able to sign up to be able to buy or sell products.
+
 As a seller, I want to be able to create listings, to sell products.
+
 As a seller, I want to be able to edit or delete my listings, to correct information on the listing. 
 
 ### Purchases:
 
 As a buyer, I want to be able to purchase products from other users' listings.
+
 As a seller, I want to be able to sell products on the site to receive money from the buyers.
+
 As a seller, I want to be able to delete my purchased listing from the site, so other users will not be able to purchase the product again.  
 
 ### Authentication & Authorisation:
 
 As a buyer or seller, I don't want other users to edit or delete my listings. 
 
-
 ## Wireframes
 
 ### Design 1
 
-![Wireframes](Docs/website.png)
+![Wireframes](docs/design1.png)
 
 ### Design 2 
 
-![Wireframes](Docs/website.png)
+![Wireframes](docs/design2.png)
 
 ### Final Design
 
-![Wireframes](Docs/website.png)
+![Wireframes](docs/wireframe_homepage.png)
 
+![Wireframes](docs/formpage_wireframe.png)
+
+![Wireframes](docs/showpage_wireframe.png)
 
 ## An ERD for your app
 
