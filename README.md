@@ -84,6 +84,16 @@ As a buyer or seller, I don't want other users to edit or delete my listings.
 
 ## Wireframes
 
+### Design 1
+
+![Wireframes](Docs/website.png)
+
+### Design 2 
+
+![Wireframes](Docs/website.png)
+
+### Final Design
+
 ![Wireframes](Docs/website.png)
 
 
@@ -137,19 +147,61 @@ A listing belongs_to a user, a user has_many listings.
 
 ![Models](docs/listings_model.png)
 
-![Models](docs/platform_model.png)
+![Models](docs/platform_models.png)
 
 ![Models](docs/genre_model.png)
 
 ## Discuss the database relations to be implemented in your application
 
+The user table shows an email and a password, which is needed for users of the site to sign up and log in to the site which the user_id is used to track the users listing. 
+
+![Database](Docs/website.png)
+
+The listing table shows the listing belongs to a user by user_id, which is a foreign key and the table allows shows data that is needed to create a successful listing, which needs a name, description, product type, platform, genre, price and date of listing. 
+
+![Database](Docs/website.png)
+
+The platform and genre table are both connected to the listings as a genre and platform belong to a listing. This is used by a forigen key which allows an array of different genres and platforms to be used for a listing.
+
+![Database](Docs/website.png)
+![Database](Docs/website.png)
+
+The active storage blobs and active storage attachment tables are connected by a forigen key and are used for users to upload images to a listing, by calling has_one_attached in listing.rb file. The table also holds the data, such as the file name and content type of the image that has been uploaded.  
+
+![Database](Docs/website.png)
 ![Database](Docs/website.png)
 
 ## Provide your database schema design
+
+The images below, show each schema design used in this application.
+
+### Users
+
+![Schema](Docs/website.png)
+
+### Listings
+
+![Schema](Docs/website.png)
+
+### Platforms
+
+![Schema](Docs/website.png)
+
+### Genres
+
+![Schema](Docs/website.png)
+
+### Active Storage Attachments
+
+![Schema](Docs/website.png)
+
+### Active Storage Blobs
 
 ![Schema](Docs/website.png)
 
 ## Describe the way tasks are allocated and tracked in your project
 
-![project](Docs/website.png)
+This project has been tracked and managed by using github project board. When creating the project board, the MVP were placed in the to do list then the progress list when a part of the project was being developed then moved to the done list as it was completed. The extra list was created to add optional features to the project if time management of the project would permit it after the MVP was completed. The images below show the progress of the project in different stages. 
+
+![Project](Docs/website.png)
 
