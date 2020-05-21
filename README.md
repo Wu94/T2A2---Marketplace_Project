@@ -34,22 +34,29 @@ Only users that are logged in can create listings to sell gaming new or old gami
 
 ## Sitemap
 
-![Sitemap](docs/sitemap.png)
+![Sitemap](docs/Sitemap.png)
 
 ## Screenshots
 
+### Homepage
 ![Website](docs/homepage.png)
 
+### Sign Up Page
 ![Website](docs/signuppage.png)
 
+### Login In Page
 ![Website](docs/loginpage.png)
 
+### New Listings Page
 ![Website](docs/newlistingpage.png)
 
+### View Listing Page
 ![Website](docs/showpage.png)
 
+### Edit Listing Page
 ![Website](docs/editlistingpage.png)
 
+### Buy Product Page
 ![Website](docs/stripepage.png)
 
 ## Target audience
